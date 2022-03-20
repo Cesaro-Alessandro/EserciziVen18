@@ -1,6 +1,6 @@
 #include <stdio.h>
 #define dim 50
-int main()
+int main(int argc, char *argv[])
 {
     int arrayNumeri[dim];
     int numero, contatore = 0, i, j;
@@ -9,7 +9,7 @@ int main()
     printf("Inserisci una sequenza numerica chiusa da uno zero \n");
     do
     {
-        scanf("%d", numero);
+        scanf("%d", &numero);
         arrayNumeri[contatore] = numero;
         contatore++;
     } while (numero != 0);
@@ -20,12 +20,12 @@ int main()
     }
     media = media / (double)contatore;
 
-    printf("I numeri stampati al contrario, maggiori delle media sono:");
+    printf("I numeri stampati al contrario, maggiori delle media sono: \n");
     for (j = contatore; j >= 0; j--)
     {
-        if (arrayNumeri[i] > media)
+        if (arrayNumeri[j] > media)
         {
-            printf("%d \n", arrayNumeri[i]);
+            printf("%d \n", arrayNumeri[j]);
         }
         
     }
